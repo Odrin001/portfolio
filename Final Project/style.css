@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #e0e0e0;
-    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: #c1c1c1;            /* Changed text color to #c1c1c1 */
+    background: linear-gradient(135deg, #2c4251, #111); /* Updated gradient with #2c4251 */
     line-height: 1.6;
 }
 
@@ -17,12 +17,12 @@ header {
     position: sticky;          /* Navbar sticks to the top */
     top: 0;
     z-index: 1000;             /* Ensures navbar stays on top */
-    background: #111;          /* Solid color navbar */
-    color: #f5a623;
+    background: #2c4251;       /* Changed navbar background to #2c4251 */
+    color: #c1c1c1;            /* Changed navbar text color to #c1c1c1 */
     padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #00aaff;
-    box-shadow: 0 4px 10px rgba(0, 170, 255, 0.3);  /* Subtle shadow */
+    border-bottom: 3px solid #d16666; /* Border color updated to #d16666 */
+    box-shadow: 0 4px 10px rgba(209, 102, 102, 0.3);  /* Subtle shadow with #d16666 */
 }
 
 /* Navbar Links */
@@ -39,15 +39,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #00aaff;
+    color: #d16666;            /* Changed link color to #d16666 */
     text-decoration: none;
     font-size: 1.1em;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f5a623;
-    text-shadow: 0 0 5px #f5a623;
+    color: #c1c1c1;            /* Hover color changed to #c1c1c1 */
+    text-shadow: 0 0 5px #c1c1c1; /* Hover effect color */
 }
 
 /* Sections */
@@ -58,12 +58,12 @@ section {
 }
 
 section:nth-child(even) {
-    background: #1c1c1c;
+    background: #2c4251;       /* Changed background to #2c4251 */
 }
 
 h2 {
     font-size: 2em;
-    color: #00aaff;
+    color: #d16666;            /* Changed heading color to #d16666 */
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -71,25 +71,25 @@ h2 {
 
 /* Project Cards */
 .project {
-    background: #2b2b2b;
-    border: 1px solid #00aaff;
+    background: #2c4251;       /* Changed background to #2c4251 */
+    border: 1px solid #d16666; /* Changed border to #d16666 */
     padding: 20px;
     margin: 20px auto;
     width: 80%;
     max-width: 600px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+    box-shadow: 0 0 10px rgba(209, 102, 102, 0.5); /* Updated box-shadow */
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(245, 166, 35, 0.8);
+    box-shadow: 0 0 20px rgba(209, 102, 102, 0.8); /* Updated hover shadow */
 }
 
 /* Contact Section */
 #contact {
-    background: #111;
-    color: #f5a623;
+    background: #111;         /* Retained black background */
+    color: #d16666;           /* Changed text color to #d16666 */
     text-align: center;
 }
 
