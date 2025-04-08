@@ -58,12 +58,12 @@ section {
 }
 
 section:nth-child(even) {
-    background: #2c4251;       /* Changed background to #2c4251 */
+    background: #2c4251;       
 }
 
 h2 {
     font-size: 2em;
-    color: #d16666;            /* Changed heading color to #d16666 */
+    color: #d16666;            
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -71,8 +71,8 @@ h2 {
 
 /* Project Cards */
 .project {
-    background: #2c4251;       /* Changed background to #2c4251 */
-    border: 1px solid #d16666; /* Changed border to #d16666 */
+    background: #2c4251;       
+    border: 1px solid #d16666; 
     padding: 20px;
     margin: 20px auto;
     width: 80%;
