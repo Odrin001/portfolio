@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">  
+    <!-- Devicon for tech icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
     <header>
@@ -12,13 +14,13 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#personal-projects">Personal Projects</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <section id="about">
         <img src="Picofme.jpg" alt="Your Picture" style="width: 200px; height: auto; border-radius: 50%; display: block; margin: 0 auto;">
         <h2>About Me</h2>
@@ -27,40 +29,42 @@
 
     <section id="certifications">
         <h2>Certifications and Awards</h2>
-        <ul>
-                <strong>PowerPoint 2019 Associate Certification</strong> - 2024  
-                <p>This certification provides effective learning and industry-recognized practice materials.</p>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Integrative Programming Project</h3>
-            <p>One of my first works, helping me understand the fundamentals of my future career.</p>
-        </div>
-        <div class="project">
-            <h3>Food Ordering App</h3>
-            <p>A project where we developed a basic food ordering application.</p>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center;">
+            <div>
+                <img src="pptbadge.png" alt="PowerPoint Certification" width="352" height="352" style="border-radius: 8px;">
+                <p><strong>Microsoft Office Specialist: PowerPoint Associate (Office 2019)</strong> – Issued 5/29/2024<br>
+                This certification provides effective learning and industry-recognized practice materials.</p>
+            </div>
+            <div>
+                <img src="wordbadge.png" alt="Word Certification" width="352" height="352" style="border-radius: 8px;">
+                <p><strong>Microsoft Office Specialist: Word Associate (Office 2019)</strong> – Issued 3/13/2024<br>
+                This certification provides effective learning and industry-recognized practice materials.</p>
+            </div>
         </div>
     </section>
 
-    <section id="personal-projects">
-        <h2>Personal Projects and Hobbies</h2>
-        <div class="project">
-            <h3>Hobby</h3>
-            <p>Playing games and watching TV series and movies.</p>
+    <section id="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="project">
+        <p>Languages and tools I'm familiar with:</p>
+        <div style="font-size: 2rem; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; align-items: center;">
+            <i class="devicon-c-plain colored" title="C"></i>
+            <i class="devicon-java-plain colored" title="Java"></i>
+            <i class="devicon-html5-plain colored" title="HTML5"></i>
+            <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+            <i class="devicon-oracle-original colored" title="Oracle APEX"></i>
+            <i class="devicon-mysql-plain colored" title="SQL"></i>
+            <i class="devicon-androidstudio-plain colored" title="Android Studio"></i>
+            <i class="devicon-vscode-plain colored" title="Visual Studio Code"></i>
         </div>
-        <div class="project">
-            <h3>Personal Project</h3>
-            <p>N/A - I haven't made any personal projects yet.</p>
-        </div>
+    </div>
     </section>
+
 
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Feel free to reach out via social media like LinkedIn and GitHub. Happy to connect!</p>
     </section>
-
 </body>
 </html>
