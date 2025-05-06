@@ -39,15 +39,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #d16666;            /* Changed link color to #d16666 */
+    color: #d16666 !important;            /* Changed link color to #d16666 */
     text-decoration: none;
     font-size: 1.1em;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #c1c1c1;            /* Hover color changed to #c1c1c1 */
-    text-shadow: 0 0 5px #c1c1c1; /* Hover effect color */
+    color: #c1c1c1 !important;            /* Hover color changed to #c1c1c1 */
+    text-shadow: 0 0 5px #c1c1c1 !important; /* Hover effect color */
 }
 
 /* Sections */
@@ -55,15 +55,20 @@ section {
     padding: 80px 20px;        /* Added extra padding to prevent overlap */
     border-bottom: 1px solid #444;
     text-align: center;
+    color: #c1c1c1 !important;  /* Ensure text color stays consistent across sections */
 }
 
 section:nth-child(even) {
     background: #2c4251;       
 }
 
+section:nth-child(odd) {
+    background: #111;
+}
+
 h2 {
     font-size: 2em;
-    color: #d16666;            
+    color: #d16666 !important;            
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -78,18 +83,18 @@ h2 {
     width: 80%;
     max-width: 600px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(209, 102, 102, 0.5); /* Updated box-shadow */
+    box-shadow: 0 0 10px rgba(209, 102, 102, 0.5); /* box-shadow */
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(209, 102, 102, 0.8); /* Updated hover shadow */
+    box-shadow: 0 0 20px rgba(209, 102, 102, 0.8); /* hover shadow */
 }
 
 /* Contact Section */
 #contact {
     background: #111;         /* Retained black background */
-    color: #d16666;           /* Changed text color to #d16666 */
+    color: #d16666 !important; /* Changed text color to #d16666 */
     text-align: center;
 }
 
@@ -103,10 +108,27 @@ a:hover, button:hover {
     transition: all 0.3s ease;
 }
 
+body p {
+    color: #c1c1c1 !important;  
+}
+
+body h1, body h2, body h3 {
+    color: #d16666 !important;  
+}
+
+body a {
+    color: #d16666 !important;  
+}
+
+body a:hover {
+    color: #c1c1c1 !important;  
+    text-shadow: 0 0 5px #c1c1c1 !important; 
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     section {
-        padding: 60px 10px;     /* Adjust padding for smaller screens */
+        padding: 60px 10px;     /* padding for smaller screens */
     }
 
     .project {
