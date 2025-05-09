@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
 </head>
 <body>
@@ -26,33 +27,53 @@
     <section id="tech-stack">
         <h2>Tech Stack</h2>
         <p>Languages and tools I'm familiar with:</p>
-        <div style="font-size: 2.8rem; margin-top: 30px; display: flex; gap: 50px; flex-wrap: wrap; justify-content: center; align-items: center;">
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-c-plain colored" title="C" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">C</span>
+        <div class="tech-icons" style="font-size: 2.8rem; margin-top: 30px; display: flex; gap: 50px; flex-wrap: wrap; justify-content: center; align-items: center;">
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-c-plain colored" title="C" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">C</span>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-java-plain colored" title="Java" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">Java</span>
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-java-plain colored" title="Java" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">Java</span>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-html5-plain colored" title="HTML5" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">HTML5</span>
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-html5-plain colored" title="HTML5" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">HTML5</span>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-javascript-plain colored" title="JavaScript" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">JavaScript</span>
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-javascript-plain colored" title="JavaScript" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">JavaScript</span>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-oracle-original colored" title="Oracle APEX" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">Oracle APEX</span>
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-oracle-original colored" title="Oracle APEX" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">Oracle APEX</span>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-mysql-plain colored" title="SQL" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">SQL</span>
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-mysql-plain colored" title="SQL" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">SQL</span>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-androidstudio-plain colored" title="Android Studio" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">Android Studio</span>
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-androidstudio-plain colored" title="Android Studio" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">Android Studio</span>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="devicon-vscode-plain colored" title="VS Code" style="font-size: 4rem;"></i><span style="font-size: 1.2rem;">VS Code</span>
+            <div class="tech-item" style="opacity: 0; display: flex; flex-direction: column; align-items: center;">
+                <i class="devicon-vscode-plain colored" title="VS Code" style="font-size: 4rem;"></i>
+                <span style="font-size: 1.2rem; margin-top: 8px;">VS Code</span>
             </div>
         </div>
     </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        anime({
+            targets: '.tech-item',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            duration: 800,
+            delay: anime.stagger(150) // 150ms delay between items
+        });
+    });
+</script>
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>

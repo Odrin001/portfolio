@@ -83,3 +83,9 @@ p {
     max-width: 800px;
     margin: 0 auto;
 }
+/* Animations */
+.slide-in-section {
+    opacity: 0;
+    transform: translateX(300px);
+}
+  
