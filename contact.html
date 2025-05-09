@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tech-stack.html">Tech Stack</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via social media. Happy to connect!</p>
+
+        <div style="font-size: 2rem; display: flex; justify-content: center; gap: 40px; padding-top: 20px;">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn" class="social-icon">
+                <i class="devicon-linkedin-plain colored"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" title="GitHub" class="social-icon">
+                <i class="devicon-github-plain colored"></i>
+            </a>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 40px;">Leave me a message!</h3>
+
+        <form action="#" method="post" style="max-width: 500px; margin: 20px auto 0; display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+            <button type="submit" style="padding: 10px 20px; background-color: #ff715b; border: none; color: white; border-radius: 5px; cursor: pointer;">Send</button>
+        </form>
+    </section>
+</body>
+</html>

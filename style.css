@@ -7,22 +7,22 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #c1c1c1;            /* Changed text color to #c1c1c1 */
-    background: linear-gradient(135deg, #2c4251, #111); /* Updated gradient with #2c4251 */
+    color: #c1c1c1;
+    background: linear-gradient(135deg, #4c5b5c, #111);
     line-height: 1.6;
 }
 
 /* Sticky Navbar */
 header {
-    position: sticky;          /* Navbar sticks to the top */
+    position: sticky;
     top: 0;
-    z-index: 1000;             /* Ensures navbar stays on top */
-    background: #2c4251;       /* Changed navbar background to #2c4251 */
-    color: #c1c1c1;            /* Changed navbar text color to #c1c1c1 */
+    z-index: 1000;
+    background: #4c5b5c;
+    color: #f9cb40;
     padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #d16666; /* Border color updated to #d16666 */
-    box-shadow: 0 4px 10px rgba(209, 102, 102, 0.3);  /* Subtle shadow with #d16666 */
+    border-bottom: 3px solid #ff715b;
+    box-shadow: 0 4px 10px rgba(255, 113, 91, 0.3);
 }
 
 /* Navbar Links */
@@ -39,27 +39,27 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #d16666 !important;            /* Changed link color to #d16666 */
+    color: #ff715b !important;
     text-decoration: none;
     font-size: 1.1em;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #c1c1c1 !important;            /* Hover color changed to #c1c1c1 */
-    text-shadow: 0 0 5px #c1c1c1 !important; /* Hover effect color */
+    color: #f9cb40 !important;
+    text-shadow: 0 0 5px #f9cb40 !important;
 }
 
 /* Sections */
 section {
-    padding: 80px 20px;        /* Added extra padding to prevent overlap */
+    padding: 80px 20px;
     border-bottom: 1px solid #444;
     text-align: center;
-    color: #c1c1c1 !important;  /* Ensure text color stays consistent across sections */
+    color: #c1c1c1;
 }
 
 section:nth-child(even) {
-    background: #2c4251;       
+    background: #4c5b5c;
 }
 
 section:nth-child(odd) {
@@ -68,7 +68,7 @@ section:nth-child(odd) {
 
 h2 {
     font-size: 2em;
-    color: #d16666 !important;            
+    color: #ff715b !important;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -76,30 +76,44 @@ h2 {
 
 /* Project Cards */
 .project {
-    background: #2c4251;       
-    border: 1px solid #d16666; 
+    background: #4c5b5c;
+    border: 1px solid #ff715b;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
     max-width: 600px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(209, 102, 102, 0.5); /* box-shadow */
+    box-shadow: 0 0 10px rgba(255, 113, 91, 0.5);
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(209, 102, 102, 0.8); /* hover shadow */
+    box-shadow: 0 0 20px rgba(255, 113, 91, 0.8);
 }
 
 /* Contact Section */
 #contact {
-    background: #111;         /* Retained black background */
-    color: #d16666 !important; /* Changed text color to #d16666 */
+    background: #4c5b5c; /* Updated background color to #4c5b5c */
+    color: #f9cb40;
     text-align: center;
+    padding: 40px 20px;
 }
 
 #contact p {
     font-size: 1.2em;
+}
+
+/* Social Icon Styling */
+.social-icon i {
+    font-size: 3rem;
+    color: #f9cb40;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.social-icon i:hover {
+    transform: scale(1.2);
+    color: #ff715b;
 }
 
 /* Hover Effects */
@@ -109,26 +123,26 @@ a:hover, button:hover {
 }
 
 body p {
-    color: #c1c1c1 !important;  
+    color: #c1c1c1 !important;
 }
 
 body h1, body h2, body h3 {
-    color: #d16666 !important;  
+    color: #ff715b !important;
 }
 
 body a {
-    color: #d16666 !important;  
+    color: #ff715b !important;
 }
 
 body a:hover {
-    color: #c1c1c1 !important;  
-    text-shadow: 0 0 5px #c1c1c1 !important; 
+    color: #f9cb40 !important;
+    text-shadow: 0 0 5px #f9cb40 !important;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     section {
-        padding: 60px 10px;     /* padding for smaller screens */
+        padding: 60px 10px;
     }
 
     .project {
