@@ -1,277 +1,84 @@
-/* General Styling */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Body: Smooth Fade-in Animation */
 body {
-    font-family: 'Arial', sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2f4f4f, #000);
     color: #c1c1c1;
-    background: linear-gradient(135deg, #4c5b5c, #111);
-    line-height: 1.6;
+    animation: fadeIn 1s ease-out;
 }
 
-/* Sticky Navbar */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Sticky Navbar (Floating + Clean Look) */
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #4c5b5c;
+    background: rgba(76, 91, 92, 0.95); /* Slight transparency */
     color: #f9cb40;
     padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #ff715b;
-    box-shadow: 0 4px 10px rgba(255, 113, 91, 0.3);
+    border-bottom: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
 }
 
 /* Navbar Links */
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
+    gap: 30px;
 }
 
 nav ul li a {
-    color: #ff715b !important;
+    color: #ff6f61;
     text-decoration: none;
-    font-size: 1.1em;
-    transition: 0.3s;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f9cb40 !important;
-    text-shadow: 0 0 5px #f9cb40 !important;
+    color: #f9cb40;
 }
 
-/* Sections */
+/* Clean Modern Sections */
 section {
     padding: 80px 20px;
-    border-bottom: 1px solid #444;
     text-align: center;
     color: #c1c1c1;
+    background: #2f4f4f;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 1200px;
 }
 
+/* Optional: Subtle Alternating Section Colors */
 section:nth-child(even) {
-    background: #4c5b5c;
+    background: #3e5f5f;
 }
 
 section:nth-child(odd) {
-    background: #111;
+    background: #2f4f4f;
 }
 
-h2 {
-    font-size: 2em;
-    color: #ff715b !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+/* Headings */
+h1, h2 {
+    color: #ff6f61;
     margin-bottom: 20px;
 }
 
-/* Project Cards */
-.project {
-    background: #4c5b5c;
-    border: 1px solid #ff715b;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px rgba(255, 113, 91, 0.5);
-}
-
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(255, 113, 91, 0.8);
-}
-
-/* Contact Section */
-#contact {
-    background: #4c5b5c;
-    color: #f9cb40;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-#contact p {
-    font-size: 1.2em;
-}
-
-/* Social Icon Styling */
-.social-icon i {
-    font-size: 3rem;
-    color: #f9cb40;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icon i:hover {
-    transform: scale(1.2);
-    color: #ff715b;
-}
-
-/* Contact Form Styling */
-.contact-form {
-    margin-top: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-
-.contact-form h3 {
-    color: #ff715b;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 1.8em;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    color: #f9cb40;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    font-size: 1em;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: 2px solid #ff715b;
-}
-
-.contact-form button {
-    background-color: #ff715b;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #f9cb40;
-    color: #000;
-}
-
-/* Highlight message */
-em {
-    color: #ff715b;
-    font-style: normal;
-    font-weight: bold;
-}
-
-/* Hover Effects */
-a:hover, button:hover {
-    opacity: 0.9;
-    transition: all 0.3s ease;
-}
-
-body p {
-    color: #c1c1c1 !important;
-}
-
-body h1, body h2, body h3 {
-    color: #ff715b !important;
-}
-
-body a {
-    color: #ff715b !important;
-}
-
-body a:hover {
-    color: #f9cb40 !important;
-    text-shadow: 0 0 5px #f9cb40 !important;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    /* Section Padding */
-    section {
-        padding: 60px 10px;
-    }
-
-    /* Navbar Flex Direction */
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Project Width Adjustment */
-    .project {
-        width: 90%;
-    }
-
-    /* Image Resizing */
-    #about img {
-        width: 150px;
-        height: 150px;
-    }
-
-    /* Text Size Adjustments */
-    h1, h2 {
-        font-size: 1.8em;
-    }
-
-    /* Contact Form Adjustments */
-    .contact-form {
-        margin-top: 20px;
-        padding: 10px;
-    }
-
-    .contact-form input, .contact-form textarea {
-        padding: 10px;
-    }
-
-    .contact-form button {
-        font-size: 0.9em;
-        padding: 10px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further Mobile Optimization */
-    h1, h2 {
-        font-size: 1.5em;
-    }
-
-    .contact-form {
-        padding: 8px;
-    }
-
-    .contact-form input, .contact-form textarea {
-        font-size: 0.9em;
-        padding: 8px;
-    }
-
-    .contact-form button {
-        font-size: 0.85em;
-        padding: 8px 12px;
-    }
-
-    /* Image Size for Very Small Screens */
-    #about img {
-        width: 120px;
-        height: 120px;
-    }
+/* Paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
 }
