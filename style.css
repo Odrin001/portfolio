@@ -203,19 +203,75 @@ body a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Section Padding */
     section {
         padding: 60px 10px;
     }
 
-    .project {
-        width: 90%;
-    }
-
+    /* Navbar Flex Direction */
     nav ul {
         flex-direction: column;
     }
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    /* Project Width Adjustment */
+    .project {
+        width: 90%;
+    }
+
+    /* Image Resizing */
+    #about img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Text Size Adjustments */
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    /* Contact Form Adjustments */
+    .contact-form {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further Mobile Optimization */
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-form {
+        padding: 8px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .contact-form button {
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+
+    /* Image Size for Very Small Screens */
+    #about img {
+        width: 120px;
+        height: 120px;
     }
 }
