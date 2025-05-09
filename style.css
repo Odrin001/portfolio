@@ -93,7 +93,7 @@ h2 {
 
 /* Contact Section */
 #contact {
-    background: #4c5b5c; /* Updated background color to #4c5b5c */
+    background: #4c5b5c;
     color: #f9cb40;
     text-align: center;
     padding: 40px 20px;
@@ -110,10 +110,72 @@ h2 {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover Effect */
 .social-icon i:hover {
     transform: scale(1.2);
     color: #ff715b;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.contact-form h3 {
+    color: #ff715b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f9cb40;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #ff715b;
+}
+
+.contact-form button {
+    background-color: #ff715b;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #f9cb40;
+    color: #000;
+}
+
+/* Highlight message */
+em {
+    color: #ff715b;
+    font-style: normal;
+    font-weight: bold;
 }
 
 /* Hover Effects */
