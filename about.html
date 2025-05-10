@@ -34,7 +34,8 @@
         document.addEventListener('DOMContentLoaded', function () {
           anime({
             targets: '.slide-in-section',
-            translateX: [300, 0], 
+            translateX: [300, 0], // Slide from right
+            opacity: [0, 1],
             easing: 'easeOutExpo',
             duration: 1200
           });
