@@ -101,3 +101,37 @@ p {
     
     }
 }
+.navbar {
+    background: rgba(76, 91, 92, 0.95) !important; /* Same as your header bg with transparency */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.navbar-brand {
+    color: #f9cb40 !important;
+    font-weight: bold;
+}
+.navbar-nav .nav-link {
+    color: #ff6f61 !important;
+    font-weight: 500;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #a82716 !important;
+}
+.navbar-toggler {
+    border-color: #ff6f61 !important;
+}
+.navbar-toggler-icon {
+    filter: invert(40%) sepia(85%) saturate(400%) hue-rotate(320deg) brightness(90%) contrast(85%);
+}
+.navbar-collapse {
+    background: rgba(76, 91, 92, 0.95);
+}
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 1rem 2rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+}
+
