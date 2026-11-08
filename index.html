@@ -112,6 +112,11 @@
             <p>Issued by Microsoft Office Specialist</p>
             <div class="meta">Date earned: March 13, 2024</div>
           </article>
+          <article class="cert-card">
+            <a class="image-preview" href="Certification%201.png" aria-label="View uploaded certification image">
+              <img src="Certification%201.png" alt="Uploaded certification image" loading="lazy" decoding="async" />
+            </a>
+          </article>
         </div>
       </div>
     </section>
@@ -121,11 +126,19 @@
         <div class="section-label">Learning</div>
         <div class="section-header">
           <h2>Course completions and trainings</h2>
-          <p>Current learning records will be added here as they become available.</p>
+          <p>Course completion and training records.</p>
         </div>
-        <div class="empty-state">
-          <strong>No entries added yet.</strong>
-          More course completions and training records will be published soon.
+        <div class="cert-grid">
+          <article class="cert-card">
+            <a class="image-preview" href="Course%20completions%20and%20trainings%201.png" aria-label="View course completion and training image 1">
+              <img src="Course%20completions%20and%20trainings%201.png" alt="Course completion and training record" loading="lazy" decoding="async" />
+            </a>
+          </article>
+          <article class="cert-card">
+            <a class="image-preview" href="Course%20completions%20and%20trainings%202.png" aria-label="View course completion and training image 2">
+              <img src="Course%20completions%20and%20trainings%202.png" alt="Course completion and training record" loading="lazy" decoding="async" />
+            </a>
+          </article>
         </div>
       </div>
     </section>
@@ -144,29 +157,36 @@
               <span class="project-kicker">IoT · Mobile Application · Indoor Navigation</span>
               <h3>DominiMap: A Real-time Indoor Navigation App using BLE for St. Dominic College of Asia</h3>
               <p>
-                DominiMap helps students and visitors navigate the St. Dominic College of Asia campus using Bluetooth Low Energy (BLE)
-                beacons as indoor positioning markers. Its interactive campus map, room and facility search, and route guidance offer
-                an accessible alternative to printed maps, signage, and verbal directions.
+                DominiMap is an indoor navigation application designed to help students and visitors navigate the GD1 building of
+                St. Dominic College of Asia. It uses Bluetooth Low Energy (BLE) technology for indoor positioning and provides
+                interactive floor maps, room searching, and navigation routes.
               </p>
             </div>
-            <span class="project-status project-status-completed">Completed</span>
+            <span class="project-status project-status-completed">COMPLETED</span>
           </div>
 
-          <div class="project-tags" aria-label="Project technologies">
-            <span>Flutter</span>
-            <span>Dart</span>
-            <span>Flutter Reactive BLE</span>
-            <span>BLE 5.0</span>
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>MongoDB Atlas</span>
-            <span>Firebase</span>
-            <span>WebSockets</span>
-            <span>Custom SVG Maps</span>
-            <span>Dijkstra’s Algorithm</span>
-            <span>Bruno</span>
-            <span>VS Code</span>
-            <span>Git &amp; GitHub</span>
+          <h4 class="project-subheading">Technology stack, hardware, and tools</h4>
+          <div class="project-stack-grid">
+            <section class="project-detail-block project-stack-group">
+              <h4>Mobile application</h4>
+              <div class="project-tags"><span>Flutter</span><span>Dart</span><span>Flutter Reactive BLE</span></div>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Backend and data</h4>
+              <div class="project-tags"><span>Node.js</span><span>Express.js</span><span>MongoDB Atlas</span><span>Firebase</span><span>WebSockets</span></div>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Hardware and positioning</h4>
+              <div class="project-tags"><span>Bluetooth Low Energy (BLE 5.0)</span><span>BLE iBeacon tags</span></div>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Maps and routing</h4>
+              <div class="project-tags"><span>Custom SVG floor maps</span><span>Dijkstra’s algorithm</span></div>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Development tools</h4>
+              <div class="project-tags"><span>Bruno API Client</span><span>Visual Studio Code</span><span>Git and GitHub</span></div>
+            </section>
           </div>
 
           <div class="dominimap-gallery" aria-label="DominiMap project images">
@@ -253,8 +273,9 @@
         <div class="section-header">
           <h2>Capstone project</h2>
           <p>
-            An ongoing RFID-based system for identifying assets, recording their movement, and keeping asset and inventory information
-            organized in a centralized platform.
+            An RFID-based asset and inventory management system designed to monitor assets and record their movements between
+            locations. An ESP32-based scanning setup captures asset movements, sends scan information to a backend system, and
+            stores records for monitoring and reporting.
           </p>
         </div>
 
@@ -264,26 +285,37 @@
               <span class="project-kicker">Capstone · RFID · Asset Management</span>
               <h3 id="assettrack-title">AssetTrack: Real-Time RFID-Based Asset and Inventory Management System</h3>
               <p>
-                AssetTrack uses RFID identification to monitor, manage, and record the movement of physical assets.
-                The system is designed to organize asset records, track locations, and review movement history,
-                supporting improved inventory monitoring and accountability.
+                AssetTrack is an RFID-based asset and inventory management system designed to monitor assets and record their
+                movements between locations. It uses RFID technology and an ESP32-based scanning setup to capture asset movements,
+                send scan information to a backend system, and store records for monitoring and reporting.
               </p>
-              <p class="project-team-role"><strong>Project team member:</strong> Audrin Alan Paltado</p>
             </div>
-            <span class="project-status project-status-ongoing">Ongoing</span>
+            <span class="project-status project-status-ongoing">ONGOING</span>
           </div>
 
-          <h4 class="project-subheading">Technologies and tools</h4>
-          <div class="project-tags" aria-label="AssetTrack technologies and tools">
-            <span>Next.js</span>
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>Tailwind CSS</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-            <span>Flutter</span>
-            <span>Git &amp; GitHub</span>
-            <span>Visual Studio Code</span>
+          <h4 class="project-subheading">Technology stack and hardware</h4>
+          <div class="project-stack-grid">
+            <section class="project-detail-block project-stack-group">
+              <h4>Web application and backend</h4>
+              <div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Node.js</span></div>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Mobile application</h4>
+              <div class="project-tags"><span>Flutter</span><span>Dart</span></div>
+              <p>Flutter application for displaying movement logs; development is ongoing.</p>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Database</h4>
+              <div class="project-tags"><span>MongoDB</span></div>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Hardware</h4>
+              <div class="project-tags"><span>ESP32</span><span>MFRC522 / RC522 RFID reader</span><span>RFID tags</span><span>Jumper wires</span><span>Breadboard</span></div>
+            </section>
+            <section class="project-detail-block project-stack-group">
+              <h4>Development tools</h4>
+              <div class="project-tags"><span>Git and GitHub</span><span>Visual Studio Code</span></div>
+            </section>
           </div>
 
           <h4 class="project-subheading">Project gallery</h4>
@@ -315,112 +347,55 @@
                 <section class="project-detail-block">
                   <h4>Objectives</h4>
                   <ol>
-                    <li>Develop an RFID-based asset identification and tracking system.</li>
-                    <li>Implement automated asset movement logging using RFID scanning.</li>
-                    <li>Provide a centralized platform for managing asset information and inventory.</li>
-                    <li>Allow users to monitor asset locations and review movement history.</li>
-                    <li>Provide analytics and filtering capabilities for better asset management.</li>
+                    <li>Register and manage assets.</li>
+                    <li>Associate RFID tags with registered assets.</li>
+                    <li>Record asset movement and scanning activity.</li>
+                    <li>Track asset locations and movement history.</li>
+                    <li>Display asset information and images.</li>
+                    <li>Provide analytics and recent RFID activity.</li>
+                    <li>Support asset searching, filtering, and sorting.</li>
+                    <li>Help improve asset monitoring and inventory management.</li>
                   </ol>
                 </section>
                 <section class="project-detail-block">
                   <h4>Main features</h4>
                   <ul>
-                    <li>RFID-based asset identification, registration, and management</li>
-                    <li>Asset information and image management</li>
-                    <li>RFID scanning and automated movement logging</li>
-                    <li>Asset location monitoring and activity history</li>
-                    <li>Analytics dashboard, filtering, sorting, and search</li>
-                    <li>Asset category management, movement records, and reporting</li>
-                  </ul>
-                </section>
-                <section class="project-detail-block">
-                  <h4>Hardware components</h4>
-                  <ul>
-                    <li>ESP32 microcontroller</li>
-                    <li>RC522 RFID reader</li>
-                    <li>RFID tags</li>
-                    <li>Jumper wires, breadboard, and supporting hardware components</li>
+                    <li>Asset registration and RFID tag association</li>
+                    <li>Asset information and image display</li>
+                    <li>RFID scanning and movement activity records</li>
+                    <li>Asset location and movement history</li>
+                    <li>Analytics, recent RFID activity, search, filtering, and sorting</li>
+                    <li>Web-based asset management and a Flutter application for movement logs</li>
                   </ul>
                 </section>
                 <section class="project-detail-block">
                   <h4>Project team</h4>
-                  <p>Audrin Alan Paltado — project team member.</p>
+                  <ul>
+                    <li>Pasco, Jade Sandara</li>
+                    <li>Tiamzon, Art Nymrah</li>
+                    <li>Olayres, Christian Pena</li>
+                  </ul>
                 </section>
               </div>
 
               <section class="project-detail-block capstone-workflow">
-                <h4>Intended system workflow</h4>
+                <h4>System workflow</h4>
                 <p class="workflow-note">
-                  This describes the intended system architecture; it does not imply that every integration or component is already complete.
+                  AssetTrack is ongoing; this workflow summarizes the system architecture and does not imply that every integration is complete.
                 </p>
-                <ol class="workflow-steps">
-                  <li><span>RFID tags are assigned to registered assets.</span></li>
-                  <li><span>The RFID reader scans an asset’s tag.</span></li>
-                  <li><span>The ESP32 processes the scanned RFID UID.</span></li>
-                  <li><span>Scan information is transmitted to the backend.</span></li>
-                  <li><span>The backend processes and stores information in MongoDB.</span></li>
-                  <li><span>The application displays asset information and movement records.</span></li>
-                </ol>
+                <div class="architecture-flow" aria-label="RFID tag to RC522 reader to ESP32 to Wi-Fi to backend API to MongoDB to application dashboard">
+                  <span>RFID Tag</span>
+                  <span>RC522 Reader</span>
+                  <span>ESP32</span>
+                  <span>Wi-Fi</span>
+                  <span>Backend API</span>
+                  <span>MongoDB</span>
+                  <span>Application Dashboard</span>
+                </div>
               </section>
             </div>
           </details>
         </article>
-      </div>
-    </section>
-
-    <section class="section" id="third-year">
-      <div class="container">
-        <div class="section-label">Academic Work</div>
-        <div class="section-header">
-          <h2>Third-year course projects</h2>
-          <p>Academic projects completed during the third year will be highlighted here as they are added.</p>
-        </div>
-        <div class="empty-state">
-          <strong>No third-year project entries yet.</strong>
-          This section is ready for major academic outputs and project showcases.
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="achievements">
-      <div class="container">
-        <div class="section-label">Achievements</div>
-        <div class="section-header">
-          <h2>Other achievements</h2>
-          <p>Academic recognitions, workshops, scholarships, and other accomplishments will be listed here when available.</p>
-        </div>
-        <div class="empty-state">
-          <strong>No entries added yet.</strong>
-          More updates and recognitions will be shared in the future.
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="awards">
-      <div class="container">
-        <div class="section-label">Awards</div>
-        <div class="section-header">
-          <h2>Competitions and awards</h2>
-          <p>Any competition participation, awards, or recognition will be added here when available.</p>
-        </div>
-        <div class="empty-state">
-          <strong>No competition records added yet.</strong>
-          This section is prepared for future achievements and contest participation.
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="leadership">
-      <div class="container">
-        <div class="section-label">Leadership</div>
-        <div class="section-header">
-          <h2>Officership and leadership experiences</h2>
-          <p>Student organization positions and leadership roles will be recorded here as they are earned.</p>
-        </div>
-        <div class="empty-state">
-          <strong>No leadership experience added yet.</strong>
-          This section is prepared for organization work and leadership roles in the future.
-        </div>
       </div>
     </section>
 
@@ -455,7 +430,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       if (window.anime && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         anime({
-          targets: '.hero-copy, .profile-card, .feature-card, .cert-card, .empty-state',
+          targets: '.hero-copy, .profile-card, .feature-card, .cert-card',
           opacity: [0, 1],
           translateY: [18, 0],
           duration: 800,

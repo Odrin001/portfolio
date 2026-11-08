@@ -28,7 +28,7 @@
   if (!reducedMotion && 'IntersectionObserver' in window) {
     const revealTargets = document.querySelectorAll(
       '.hero .eyebrow, .hero h1, .hero-copy > p, .hero-actions, .hero-meta, .profile-card, ' +
-      '.section-label, .section-header, .feature-card, .cert-card, .empty-state, .info-card, ' +
+      '.section-label, .section-header, .feature-card, .cert-card, .info-card, ' +
       '.resume-card, .contact-card, .tech-item, .project-card, .project-image, .project-tags span, ' +
       '.workflow-steps li, .site-footer .container'
     );
@@ -45,7 +45,7 @@
     });
 
     revealTargets.forEach(function (element) {
-      if (window.anime && element.matches('.profile-card, .feature-card, .cert-card, .empty-state')) {
+      if (window.anime && element.matches('.profile-card, .feature-card, .cert-card')) {
         return;
       }
 
@@ -106,7 +106,7 @@
     const closeButton = projectLightbox.querySelector('.project-lightbox-close');
 
     document.addEventListener('click', function (event) {
-      const imageLink = event.target.closest('.project-image a');
+      const imageLink = event.target.closest('.project-image a, a.image-preview');
       if (!imageLink || event.button !== 0 || event.metaKey || event.ctrlKey ||
           event.shiftKey || event.altKey) {
         return;

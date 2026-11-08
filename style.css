@@ -391,6 +391,28 @@ h1, h2, h3, h4 {
   font-size: 1rem;
 }
 
+.project-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 0.9rem 0 1.5rem;
+}
+
+.project-stack-group h4 {
+  margin-bottom: 0.35rem;
+  color: var(--brand);
+  font-size: 0.95rem;
+}
+
+.project-stack-group .project-tags {
+  margin: 0.7rem 0 0;
+}
+
+.project-stack-group p {
+  margin: 0.7rem 0 0;
+  font-size: 0.9rem;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -541,6 +563,33 @@ h1, h2, h3, h4 {
   margin-top: 0;
 }
 
+.architecture-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.architecture-flow span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgba(114, 224, 209, 0.2);
+  border-radius: 12px;
+  background: rgba(17, 32, 45, 0.66);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.architecture-flow span:not(:last-child)::after {
+  content: "→";
+  color: var(--brand);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
 .project-lightbox {
   position: fixed;
   width: min(94vw, 1100px);
@@ -646,31 +695,31 @@ h1, h2, h3, h4 {
 
 .cert-card img {
   width: 100%;
+  max-height: 440px;
+  object-fit: contain;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   margin-bottom: 1rem;
+}
+
+.cert-card a.image-preview {
+  display: block;
+  border-radius: 16px;
+}
+
+.cert-card a.image-preview:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
+}
+
+.cert-card a.image-preview img {
+  margin-bottom: 0;
 }
 
 .cert-card .meta {
   font-size: 0.82rem;
   color: #d4dbe4;
   margin-top: 0.5rem;
-}
-
-.empty-state {
-  background: rgba(12, 23, 31, 0.72);
-  border: 1px dashed rgba(114, 224, 209, 0.28);
-  border-radius: 22px;
-  padding: 2rem 1.25rem;
-  text-align: center;
-  color: var(--muted);
-}
-
-.empty-state strong {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: var(--text);
-  font-size: 1.05rem;
 }
 
 .tech-grid {
