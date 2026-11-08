@@ -29,7 +29,7 @@
     const revealTargets = document.querySelectorAll(
       '.hero .eyebrow, .hero h1, .hero-copy > p, .hero-actions, .hero-meta, .profile-card, ' +
       '.section-label, .section-header, .feature-card, .cert-card, .empty-state, .info-card, ' +
-      '.resume-card, .contact-card, .tech-item, .site-footer .container'
+      '.resume-card, .contact-card, .tech-item, .project-card, .project-image, .site-footer .container'
     );
     const revealObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(function (entry) {

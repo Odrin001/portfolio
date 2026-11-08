@@ -323,6 +323,170 @@ h1, h2, h3, h4 {
   margin: 0 0 0.7rem;
 }
 
+.dominimap-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  overflow: hidden;
+  background:
+    radial-gradient(520px circle at 100% 0, rgba(99, 164, 255, 0.1), transparent 68%),
+    rgba(17, 32, 45, 0.94);
+}
+
+.dominimap-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.dominimap-heading h3 {
+  max-width: 880px;
+  margin: 0.55rem 0 0.85rem;
+  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+  line-height: 1.2;
+}
+
+.dominimap-heading p {
+  max-width: 850px;
+}
+
+.project-kicker {
+  color: var(--brand);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-status {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(255, 180, 84, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 180, 84, 0.08);
+  color: #ffd08d;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.5rem 0;
+}
+
+.project-tags span {
+  padding: 0.38rem 0.68rem;
+  border: 1px solid rgba(114, 224, 209, 0.18);
+  border-radius: 999px;
+  background: rgba(114, 224, 209, 0.06);
+  color: #c6f6ed;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.dominimap-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.project-image {
+  min-width: 0;
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(7, 19, 29, 0.58);
+  overflow: hidden;
+}
+
+.project-image a {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #101820;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.project-image a:hover img,
+.project-image a:focus-visible img {
+  transform: scale(1.025);
+  filter: brightness(1.06);
+}
+
+.project-image figcaption {
+  padding: 0.7rem 0.2rem 0.1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.project-details {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.project-details summary {
+  width: fit-content;
+  padding: 1rem 0 0.3rem;
+  color: var(--brand);
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.project-details summary:hover,
+.project-details summary:focus-visible {
+  color: #b6fff3;
+}
+
+.project-details-content {
+  padding-top: 1.25rem;
+  animation: project-details-in 0.3s ease both;
+}
+
+.project-detail-block {
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(7, 19, 29, 0.45);
+}
+
+.project-detail-block h4 {
+  margin-bottom: 0.65rem;
+  color: var(--brand);
+  font-size: 1rem;
+}
+
+.project-detail-block p,
+.project-detail-block ul,
+.project-detail-block ol {
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-detail-block ul,
+.project-detail-block ol {
+  padding-left: 1.25rem;
+}
+
+.project-detail-block li + li {
+  margin-top: 0.4rem;
+}
+
+.project-contribution {
+  margin-top: 1rem;
+}
+
 .feature-card p,
 .cert-card p,
 .info-card p,
@@ -409,6 +573,11 @@ h1, h2, h3, h4 {
   grid-template-columns: 0.9fr 1.1fr;
 }
 
+.contact-grid-single {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: start;
+}
+
 .contact-list {
   list-style: none;
   padding: 0;
@@ -441,32 +610,6 @@ h1, h2, h3, h4 {
   border: 1px solid var(--line);
   color: var(--text);
   font-size: 1.6rem;
-}
-
-form {
-  display: grid;
-  gap: 1rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(9, 17, 22, 0.7);
-  color: var(--text);
-  padding: 0.9rem 1rem;
-  font: inherit;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #8ea2b4;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 140px;
 }
 
 .site-footer {
@@ -510,6 +653,15 @@ textarea {
 
   .resume-card {
     align-items: flex-start;
+  }
+
+  .dominimap-heading {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .dominimap-gallery {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -830,6 +982,11 @@ body {
 @keyframes gradient-shift {
   from { background-position: 0% 50%; }
   to { background-position: 100% 50%; }
+}
+
+@keyframes project-details-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (hover: none), (pointer: coarse) {
