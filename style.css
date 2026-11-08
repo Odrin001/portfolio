@@ -690,20 +690,24 @@ h1, h2, h3, h4 {
 }
 
 .cert-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
 .cert-card img {
   width: 100%;
-  max-height: 440px;
+  max-height: 360px;
   object-fit: contain;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .cert-card a.image-preview {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   border-radius: 16px;
 }
 
@@ -712,14 +716,50 @@ h1, h2, h3, h4 {
   outline-offset: 4px;
 }
 
-.cert-card a.image-preview img {
-  margin-bottom: 0;
+.certificate-preview-label {
+  color: var(--brand);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.cert-card h3 {
+  margin-top: 1rem;
+}
+
+.cert-card .cert-issuer {
+  margin: 0;
+  color: var(--muted);
 }
 
 .cert-card .meta {
   font-size: 0.82rem;
   color: #d4dbe4;
   margin-top: 0.5rem;
+}
+
+.cert-details {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+}
+
+.cert-details div {
+  display: grid;
+  grid-template-columns: minmax(6.5rem, 0.75fr) 1.25fr;
+  gap: 0.7rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.82rem;
+}
+
+.cert-details dt {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.cert-details dd {
+  margin: 0;
+  color: var(--text);
 }
 
 .tech-grid {
@@ -783,22 +823,6 @@ h1, h2, h3, h4 {
   color: var(--muted);
 }
 
-.copy-email {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--brand);
-  font: inherit;
-  cursor: pointer;
-}
-
-.copy-email:hover,
-.copy-email:focus-visible {
-  color: #b6fff3;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
 .social-row {
   display: flex;
   flex-wrap: wrap;
@@ -817,6 +841,89 @@ h1, h2, h3, h4 {
   border: 1px solid var(--line);
   color: var(--text);
   font-size: 1.6rem;
+}
+
+.contact-page {
+  background: #081923;
+  color: #e5edf5;
+}
+
+.contact-page .site-header {
+  background: rgba(8, 25, 35, 0.9);
+  border-bottom-color: #263b4a;
+}
+
+.contact-page .navbar-nav .nav-link:hover,
+.contact-page .navbar-nav .nav-link:focus,
+.contact-page .navbar-nav .nav-link.active {
+  background: rgba(85, 214, 194, 0.08);
+}
+
+.contact-page .section-header h2 {
+  color: #e5edf5;
+}
+
+.contact-page .section-header p {
+  color: #9eafbc;
+}
+
+.contact-page .contact-card {
+  background: #10212e;
+  border-color: #263b4a;
+  padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.contact-page .contact-card h3 {
+  color: #e0e8f0;
+}
+
+.contact-page .contact-list li {
+  color: #9eafbc;
+}
+
+.contact-page .contact-list i {
+  width: 1.25rem;
+  color: #9eafbc;
+  text-align: center;
+}
+
+.contact-page .contact-list a {
+  color: #1683ff;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.contact-page .contact-list a:hover,
+.contact-page .contact-list a:focus-visible {
+  color: #69adff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact-page .contact-list a.contact-email {
+  color: #55d6c2;
+}
+
+.contact-page .contact-list a.contact-email:hover,
+.contact-page .contact-list a.contact-email:focus-visible {
+  color: #9af0e2;
+}
+
+.contact-page .social-link {
+  background: #172c40;
+  border-color: #263b4a;
+  color: #e5edf5;
+}
+
+.contact-page .social-link:hover,
+.contact-page .social-link:focus-visible {
+  background: #1c3852;
+  border-color: #1683ff;
+  color: #69adff;
+}
+
+.contact-page .site-footer {
+  border-top-color: #263b4a;
 }
 
 .site-footer {
