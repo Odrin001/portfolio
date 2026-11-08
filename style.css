@@ -783,6 +783,22 @@ h1, h2, h3, h4 {
   color: var(--muted);
 }
 
+.copy-email {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--brand);
+  font: inherit;
+  cursor: pointer;
+}
+
+.copy-email:hover,
+.copy-email:focus-visible {
+  color: #b6fff3;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .social-row {
   display: flex;
   flex-wrap: wrap;

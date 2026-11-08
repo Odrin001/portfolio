@@ -45,6 +45,7 @@
           <article class="contact-card">
             <h3>Professional links</h3>
             <ul class="contact-list">
+              <li><i class="bi bi-envelope"></i> <button class="copy-email" type="button" data-email="audrinalan22@gmail.com" aria-label="Copy email address">audrinalan22@gmail.com</button></li>
               <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/audrin-alan-paltado-306571366/" target="_blank" rel="noreferrer">LinkedIn</a></li>
               <li><i class="bi bi-github"></i> <a href="https://github.com/Odrin001" target="_blank" rel="noreferrer">GitHub</a></li>
             </ul>
@@ -67,5 +68,21 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="animations.js?v=2"></script>
+  <script>
+    document.querySelector('.copy-email').addEventListener('click', async function () {
+      try {
+        await navigator.clipboard.writeText(this.dataset.email);
+        this.textContent = 'Copied!';
+        window.setTimeout(() => {
+          this.textContent = this.dataset.email;
+        }, 1600);
+      } catch (error) {
+        this.textContent = 'Copy unavailable';
+        window.setTimeout(() => {
+          this.textContent = this.dataset.email;
+        }, 2000);
+      }
+    });
+  </script>
 </body>
 </html>
