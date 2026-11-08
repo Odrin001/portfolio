@@ -368,6 +368,29 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
+.project-status-completed {
+  border-color: rgba(114, 224, 209, 0.3);
+  background: rgba(114, 224, 209, 0.1);
+  color: #a9f4e8;
+}
+
+.project-status-ongoing {
+  border-color: rgba(255, 180, 84, 0.32);
+  background: rgba(255, 180, 84, 0.1);
+  color: #ffd08d;
+}
+
+.project-team-role {
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+.project-subheading {
+  margin: 1.25rem 0 0;
+  color: var(--text);
+  font-size: 1rem;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -383,6 +406,13 @@ h1, h2, h3, h4 {
   color: #c6f6ed;
   font-size: 0.76rem;
   font-weight: 600;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.project-tags span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(114, 224, 209, 0.4);
+  background: rgba(114, 224, 209, 0.12);
 }
 
 .dominimap-gallery {
@@ -391,6 +421,14 @@ h1, h2, h3, h4 {
   align-items: start;
   gap: 1rem;
   margin: 1.5rem 0;
+}
+
+.capstone-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin: 0.9rem 0 1.5rem;
 }
 
 .project-image {
@@ -413,7 +451,6 @@ h1, h2, h3, h4 {
 .project-image img {
   width: 100%;
   height: auto;
-  max-height: 620px;
   object-fit: contain;
   transition: transform 0.35s ease, filter 0.35s ease;
 }
@@ -454,6 +491,111 @@ h1, h2, h3, h4 {
   animation: project-details-in 0.3s ease both;
 }
 
+.capstone-detail-grid {
+  align-items: stretch;
+}
+
+.capstone-workflow {
+  margin-top: 1rem;
+}
+
+.workflow-note {
+  margin: 0 0 1rem !important;
+  color: var(--muted);
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: workflow;
+}
+
+.workflow-steps li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  min-height: 78px;
+  padding: 0.85rem;
+  border: 1px solid rgba(114, 224, 209, 0.16);
+  border-radius: 14px;
+  background: rgba(17, 32, 45, 0.66);
+  color: var(--muted);
+  counter-increment: workflow;
+}
+
+.workflow-steps li::before {
+  content: counter(workflow, decimal-leading-zero);
+  flex: 0 0 auto;
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.workflow-steps li + li {
+  margin-top: 0;
+}
+
+.project-lightbox {
+  position: fixed;
+  width: min(94vw, 1100px);
+  max-width: none;
+  max-height: 92vh;
+  padding: 3.25rem 1rem 1rem;
+  overflow: auto;
+  border: 1px solid rgba(114, 224, 209, 0.26);
+  border-radius: 20px;
+  background: rgba(7, 19, 29, 0.98);
+  color: var(--text);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.66);
+}
+
+.project-lightbox[open] {
+  animation: project-details-in 0.22s ease both;
+}
+
+.project-lightbox::backdrop {
+  background: rgba(1, 7, 12, 0.82);
+  backdrop-filter: blur(7px);
+}
+
+.project-lightbox img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(92vh - 5rem);
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.project-lightbox-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.7rem;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-strong);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.project-lightbox-close:hover,
+.project-lightbox-close:focus-visible {
+  border-color: rgba(114, 224, 209, 0.45);
+  color: var(--brand);
+}
+
 .project-detail-block {
   padding: 1.15rem;
   border: 1px solid var(--line);
@@ -483,7 +625,7 @@ h1, h2, h3, h4 {
   margin-top: 0.4rem;
 }
 
-.project-contribution {
+.project-role {
   margin-top: 1rem;
 }
 
@@ -626,6 +768,14 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
   }
 
+  .capstone-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflow-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .section {
     padding: 4.5rem 0;
   }
@@ -661,6 +811,11 @@ h1, h2, h3, h4 {
   }
 
   .dominimap-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .capstone-gallery,
+  .workflow-steps {
     grid-template-columns: 1fr;
   }
 }
