@@ -900,13 +900,54 @@ h1, h2, h3, h4 {
   text-underline-offset: 0.2em;
 }
 
-.contact-page .contact-list a.contact-email {
+.contact-page .contact-email {
+  padding: 0;
+  border: 0;
+  background: none;
   color: #55d6c2;
+  font: inherit;
+  overflow-wrap: anywhere;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-.contact-page .contact-list a.contact-email:hover,
-.contact-page .contact-list a.contact-email:focus-visible {
+.contact-page .contact-email:hover,
+.contact-page .contact-email:focus-visible {
   color: #9af0e2;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact-page .contact-email-group {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.contact-page .contact-email-fallback {
+  width: min(100%, 20rem);
+  padding: 0.25rem 0.45rem;
+  border: 1px solid #41645f;
+  border-radius: 0.35rem;
+  background: #0b1a23;
+  color: #55d6c2;
+  font: inherit;
+}
+
+.contact-page .contact-email-fallback[hidden] {
+  display: none;
+}
+
+.contact-page .contact-copy-status {
+  color: #9af0e2;
+  font-size: 0.85rem;
+}
+
+.contact-page .contact-copy-status.is-error {
+  color: #f0c98e;
 }
 
 .contact-page .social-link {

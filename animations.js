@@ -100,6 +100,41 @@
     });
   }
 
+  const copyEmailButton = document.querySelector('[data-copy-email]');
+  const copyEmailFallback = document.querySelector('.contact-email-fallback');
+  const copyEmailStatus = document.querySelector('.contact-copy-status');
+
+  if (copyEmailButton && copyEmailFallback && copyEmailStatus) {
+    let copyStatusTimeout;
+
+    copyEmailButton.addEventListener('click', async function () {
+      const email = copyEmailButton.dataset.copyEmail;
+
+      try {
+        if (!navigator.clipboard || typeof navigator.clipboard.writeText !== 'function') {
+          throw new Error('Clipboard API is unavailable.');
+        }
+
+        await navigator.clipboard.writeText(email);
+        copyEmailFallback.hidden = true;
+        copyEmailButton.focus();
+        copyEmailStatus.classList.remove('is-error');
+        copyEmailStatus.textContent = 'Email copied!';
+        window.clearTimeout(copyStatusTimeout);
+        copyStatusTimeout = window.setTimeout(function () {
+          copyEmailStatus.textContent = '';
+        }, 2500);
+      } catch (error) {
+        window.clearTimeout(copyStatusTimeout);
+        copyEmailFallback.hidden = false;
+        copyEmailStatus.classList.add('is-error');
+        copyEmailStatus.textContent = 'Clipboard unavailable. Copy the selected email address manually.';
+        copyEmailFallback.focus();
+        copyEmailFallback.select();
+      }
+    });
+  }
+
   const projectLightbox = document.querySelector('.project-lightbox');
   if (projectLightbox && typeof projectLightbox.showModal === 'function') {
     const previewImage = projectLightbox.querySelector('img');
